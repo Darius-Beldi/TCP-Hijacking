@@ -19,5 +19,5 @@ iptables -A OUTPUT -p tcp --tcp-flags RST RST -j DROP
 iptables -t nat -A POSTROUTING -j MASQUERADE 
 
 # simulez cum functioneaza pachetele in viata reala
-#tc qdisc add dev eth0 root netem delay 100ms 10ms 25% loss 5% 25% corrupt 10% reorder 25% 50%
+tc qdisc add dev eth0 root netem delay 100ms 10ms 25% loss 5% 25% corrupt 10% reorder 25% 50%
 
